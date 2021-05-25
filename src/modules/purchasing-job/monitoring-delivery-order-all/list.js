@@ -44,26 +44,26 @@ export class List {
 
     columns = [
         { field: "index", title: "No" , sortable: false},
-         { field: "no", title: "Nomor Surat Jalan", sortable: false },
-         { field: "supplierDoDate", title: "Tanggal Surat Jalan", sortable: false, formatter: function (value, data, index) {
-                return moment(value).format("DD/MM/YYYY");
+        { field: "no", title: "Nomor Surat Jalan", sortable: false },
+        { field: "supplierDoDate", title: "Tanggal Surat Jalan", sortable: false, formatter: function (value, data, index) {
+            return moment(value).format("DD/MM/YYYY");
             }
         },
          { field: "date", title: "Tanggal Tiba", sortable: false, formatter: function (value, data, index) {
-                return moment(value).format("DD/MM/YYYY");
+            return moment(value).format("DD/MM/YYYY");
             }
         },
-         { field: "supplierName", title: "Nama Supplier", sortable: false },
-         { field: "shipmentType", title: "Jenis Supplier", sortable: false, formatter: function (value, data) {
-            
-                return (value)==""? "Local" : "Import";
-            }},
+        { field: "supplierName", title: "Nama Supplier", sortable: false },
+        { field: "shipmentType", title: "Jenis Supplier", sortable: false, formatter: function (value, data) {
+            return (value)==""? "Local" : "Import";
+            }
+        },
         { field: "shipmentType", title: "Pengiriman", sortable: false },
         { field: "shipmentNo", title: "No BL", sortable: false },
         { field: "isCustoms", title: "Dikenakan Beacukai", sortable: false , formatter: function (value, data) {
-            
-                return (value)==true? "Ya" : "Tidak";
-            } },
+            return (value)==true? "Ya" : "Tidak";
+            } 
+        },
         { field: "ePONo", title: "No PO Eksternal", sortable: false },
         { field: "prNo", title: "Nomor PR", sortable: false },
         { field: "prRefNo", title: "Nomor Referensi PR", sortable: false },
@@ -72,26 +72,27 @@ export class List {
         { field: "productName", title: "Nama Barang", sortable: false },
         { field: "dealQuantity", title: "Jumlah Dipesan", sortable: false, formatter:(value,data)=>{
             return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
-        }  },
-          { field: "dOQuantity", title: "Jumlah Diterima", sortable: false, formatter:(value,data)=>{
+            }  
+        },
+        { field: "dOQuantity", title: "Jumlah Diterima", sortable: false, formatter:(value,data)=>{
             return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
-        }  },
-         { field: "uomUnit", title: "Satuan", sortable: false },
-         { field: "price", title: "Harga", sortable: false },
-         { field: "doCurrencyCode", title: "Mata Uang", sortable: false },
-         { field: "productRemark", title: "Keterangan", sortable: false },
-           { field: "createdBy", title: "Staff Pembelian", sortable: false },
-         { field: "EPOcreatedBy", title: "Staff Pembelian (P/O)", sortable: false },         
-         { field: "URNNo", title: "Nomor Bon Unit", sortable: false },
-         { field: "URNDate", title: "Tanggal Bon Unit", sortable: false, formatter: function (value, data, index) {             
-             if (moment(value).format("DD MMM YYYY")=="01 Jan 1970")
+            } 
+        },
+        { field: "uomUnit", title: "Satuan", sortable: false },
+        { field: "price", title: "Harga", sortable: false },
+        { field: "doCurrencyCode", title: "Mata Uang", sortable: false },
+        { field: "productRemark", title: "Keterangan", sortable: false },
+        { field: "createdBy", title: "Staff Pembelian", sortable: false },
+        { field: "EPOcreatedBy", title: "Staff Pembelian (P/O)", sortable: false },         
+        { field: "URNNo", title: "Nomor Bon Unit", sortable: false },
+        { field: "URNDate", title: "Tanggal Bon Unit", sortable: false, formatter: function (value, data, index) {             
+            if (moment(value).format("DD MMM YYYY")=="01 Jan 1970")
                 return "-"
-             else    
+            else    
                 return moment(value).format("DD/MM/YYYY");
-              }
-         },
-
-         { field: "UnitName", title: "Nama Unit", sortable: false },
+            }
+        },
+        { field: "UnitName", title: "Nama Unit", sortable: false },
     ];
 
     search() {

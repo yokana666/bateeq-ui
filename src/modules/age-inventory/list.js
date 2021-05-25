@@ -25,7 +25,7 @@ export class List {
                 console.log(this.result);
                 for (var item of this.result)
                 {
-                    this.total=this.total+item.quantity;
+                    this.total=this.total+item.Quantity;
                 }
             })
     }
@@ -38,7 +38,8 @@ export class List {
             //     this.result = result;
             // })
     }
+
     // view(data) { 
-    //     this.router.navigateToRoute('view', { storageId: data.storageId, itemId: data.itemId });
+    //     this.router.navigateToRoute('view', { storageId: data.storageId, itemCode: data.ItemCode });
     // } 
 }

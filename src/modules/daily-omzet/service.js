@@ -6,12 +6,12 @@ import { Config } from "aurelia-api"
 
 
 //const serviceUri = "docs/sales"
-const serviceUri = "omzet-per-day"
+const serviceUri = "sales/omzet-per-day"
 
 export class Service extends RestService {
 
     constructor(http, aggregator, config, api) {
-        super(http, aggregator, config, "sales");
+        super(http, aggregator, config, "pos");
     }
 
     // getSalesSummary(dateFrom, dateTo){

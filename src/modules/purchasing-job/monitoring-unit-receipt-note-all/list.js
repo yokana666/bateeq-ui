@@ -14,7 +14,6 @@ export class List {
         this.router = router;
 
     }
-    
     tableOptions = {
         search: false,
         showToggle: false,
@@ -23,16 +22,14 @@ export class List {
     get unitLoader(){
         return UnitLoader;
     }
-    unitView = (unit) => {
-      
+    unitView = (unit) => {  
         return `${unit.Code} - ${unit.Name}`
-      }
+    }
     get supplierLoader(){
         return SupplierLoader;
     }
      get unitReceiptLoader(){
         return UnitReceiptLoader;
-     
     }
    
     columns = [
@@ -90,10 +87,10 @@ export class List {
             this.Values(),
             this.service.search(this.arg)
                 .then(result => {
-                            return {
-                        total: result.info.total,
-                        data: result.data,
-                    }
+                        return {
+                            total: result.info.total,
+                            data: result.data,
+                        }
                 })
         ) : { total: 0, data: {} };
     }

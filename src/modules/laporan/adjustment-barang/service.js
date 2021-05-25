@@ -4,7 +4,7 @@ import {RestService} from '../../../utils/rest-service';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api";
 
-const serviceUriStorages = 'docs/adjustment';  
+const serviceUriStorages = 'adjustment/report';  
 
 export class Service extends RestService{
   
@@ -16,7 +16,7 @@ export class Service extends RestService{
    getAdjustmentByStorageId(storageId)
   {
     var config = Container.instance.get(Config);
-    var endpoint = `${serviceUriStorages}/storage/${storageId}`; 
+    var endpoint = `${serviceUriStorages}/byStorage?id=${storageId}`; 
     return super.get(endpoint);
   }
   // getAllInventory(storageId, keyword)

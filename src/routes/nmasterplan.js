@@ -89,7 +89,7 @@ module.exports = [
         name: 'booking-order',
         moduleId: './modules/nmaster-plan/booking-order-view/index',
         nav: true,
-        title: 'VIew Booking Order',
+        title: 'View Booking Order',
         auth: true,
         settings: {
             group: "nmasterplan",

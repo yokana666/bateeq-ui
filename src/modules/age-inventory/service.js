@@ -15,14 +15,14 @@ export class Service extends RestService{
   getAllInventory(storageId, keyword)
   {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("inventory").client.baseUrl + 'storages/' + storageId+ '/ageinv?keyword=' + keyword; 
+    var endpoint = config.getEndpoint("inventory").client.baseUrl + `inventories/monitoring/age?storageId=${storageId}&keyword=${keyword}`;
     return super.get(endpoint);
   }
 
-  generateExcel(storageId, keyword) {
+  generateExcel(storageId, keyword) 
+  {
     var config = Container.instance.get(Config);
-    var endpoint = config.getEndpoint("inventory").client.baseUrl + 'storages/' + storageId+ '/ageinv?keyword=' + keyword; 
+    var endpoint = config.getEndpoint("inventory").client.baseUrl + `inventories/monitoring/age?storageId=${storageId}&keyword=${keyword}`; 
     return super.getXls(endpoint);
+  }
 }
-  
- }

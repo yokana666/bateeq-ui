@@ -9,7 +9,7 @@ const serviceUri = "sales/omzet-per-day"
 export class Service extends RestService {
 
     constructor(http, aggregator, config, api) {
-        super(http, aggregator, config, "sales");
+        super(http, aggregator, config, "pos");
     }
 
     getSalesSummary(dateFrom, dateTo){

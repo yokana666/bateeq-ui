@@ -4,7 +4,7 @@ import { RestService } from '../../utils/rest-service';
 import { Container } from 'aurelia-dependency-injection';
 import { Config } from "aurelia-api"
 
-const serviceUri = 'warehousee/upload-pkbj';
+const serviceUri = 'warehouse/upload-pkbj';
 
 export class Service extends RestService {
   constructor(http, aggregator, config, api) {
